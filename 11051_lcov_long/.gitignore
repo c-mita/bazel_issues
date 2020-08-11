@@ -1,0 +1,10 @@
+*.png
+*.css
+*.html
+
+*.info
+*.gcno
+*.gcda
+
+*.gz
+*.json
