@@ -1,0 +1,15 @@
+## Checks for coverage across packages
+
+There was strange behaviour where
+`blaze coverage //java_packages/bar:all --combined_report=lcov`
+would not output coverage for foo.LibFoo (depended on by LibBar).
+
+It turns out this is just a strange outcome of the --instrumentation_filter
+setting's default behaviour (there are heuristics when no setting is passed to
+determine which things to instrument).
+
+`blaze coverage //java_packages/bar:all --combined_report=lcov --insturmentaion_filter=".*"`
+works as expected.
+
+The bazel docs could do with clarefication.
+
