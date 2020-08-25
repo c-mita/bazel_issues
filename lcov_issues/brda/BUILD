@@ -8,7 +8,7 @@ java_test(
     size = "small",
     srcs = ["BranchTest.java"],
     test_class = "BranchTest",
-    deps = [":jlib", "//junit:junit4"],
+    deps = [":jlib", "@junit//:junit4"],
 )
 
 java_test(
@@ -16,7 +16,7 @@ java_test(
     size = "small",
     srcs = ["NoBranchTest.java"],
     test_class = "NoBranchTest",
-    deps = [":jlib", "//junit:junit4"],
+    deps = [":jlib", "@junit//:junit4"],
 )
 
 java_test(
@@ -24,7 +24,7 @@ java_test(
     size = "small",
     srcs = ["SwitchTest.java"],
     test_class = "SwitchTest",
-    deps = [":jlib", "//junit:junit4"],
+    deps = [":jlib", "@junit//:junit4"],
 )
 
 cc_library(

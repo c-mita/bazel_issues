@@ -12,3 +12,8 @@ http_archive(
     name = "local_java_tools",
     urls = ["file:///tmp/java_tools_java11.zip"],
 )
+
+local_repository(
+    name = "junit",
+    path = "../junit",
+)
